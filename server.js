@@ -14,6 +14,7 @@ app.get("/", function (req, res) {
 app.post("/message", function (req, res) {
 	var text = req.body.msgText;
 	console.log("Received message: " + text);
+	messages.push(text);
 	res.end();
 });
 
