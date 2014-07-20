@@ -1,6 +1,7 @@
 var http = require('http');
 
 var requestHandler = function(request, response) {
+  console.log('Received request');
 }
 
 var server = http.createServer(requestHandler);
