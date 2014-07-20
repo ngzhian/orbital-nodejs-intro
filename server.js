@@ -2,7 +2,7 @@ var http = require('http');
 
 var requestHandler = function(request, response) {
   console.log('Received request');
-  response.write('Hello World!');
+  response.write('<h1>Hello World!</h1>');
   response.end();
 }
 
