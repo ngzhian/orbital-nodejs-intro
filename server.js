@@ -1,5 +1,8 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
+
+app.use(bodyParser.urlencoded());
 
 var messages = [];
 
@@ -9,7 +12,8 @@ app.get("/", function (req, res) {
 });
 
 app.post("/message", function (req, res) {
-	console.log("Received message!");
+	var text = req.body.msgText;
+	console.log("Received message: " + text);
 	res.end();
 });
 
